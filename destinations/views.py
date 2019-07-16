@@ -5,7 +5,8 @@ from .forms import DestinationForm
 
 def destination_list(request):
     context = {
-        "destinations": Destination.objects.all()
+        "destinations": Destination.objects.all(),
+   
     }
     return render(request, 'list.html', context)
 

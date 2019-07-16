@@ -1,0 +1,18 @@
+#all {
+
+	color: blue;
+    font-size: 80px;
+    background-color: white;
+    position: relative;
+    animation-name: animationn;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}

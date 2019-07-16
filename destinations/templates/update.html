@@ -4,9 +4,19 @@
 {% block title %}Update{% endblock title %}
 
 {% block content %}
-<form action="{% url 'destination-update' destination_obj.id %}" method="POST" enctype="multipart/form-data">
-  {% csrf_token %}
-  {{form.as_p}}
-  <input type="submit" value="Update">
+<form class="col-6 mx-auto" action="{% url 'destination-update' destination_obj.id %}" method="POST" enctype="multipart/form-data">
+<form>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationServer01">Full Name </label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First Name and Last name" value="Ahmad Helal" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      </div>
+{% csrf_token %}
+  {{form|crispy}}
+  
+  <button class="btn btn-secondary btn-block" style="background-color: gray; color: white"> Update </button></small>
 </form>
 {% endblock content %}

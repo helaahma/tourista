@@ -3,15 +3,20 @@
 {% block title %}Detail{% endblock title %} 
 
 {% block content %}
-    <p>{{destination.name}}</p>
-    <p>{{destination.description}}</p>
-    <p>{{destination.activities}}</p>
-    <p><img src="{{destination.pretty_picture.url}}"></p>
-    <p>{{destination.optimal_visiting_season}}</p>
-    <a href="{% url 'destination-update' destination.id %}">
-        <button>Update</button>
+    <p class="text-justify; mx-auto my-5">{{destination.name}}</p>
+    <p class="text-justify; mx-auto my-5">{{destination.description}}</p>
+    <p class="text-justify; mx-auto my-5">{{destination.activities}}</p>
+    <p class="text-justify; mx-auto my-5"><img src="{{destination.pretty_picture.url}}" class="col-lg-12 col-md-12 col-s-12 mx-auto my-5"></p>
+
+    <div>
+
+    <h1 id="all" class="text-justify; mx-auto my-5" style="text-decoration-line:underline; font-family: cursive; text-transform: capitalize"> Visiting season: {{destination.optimal_visiting_season}}</p>
+    </h1>
+</div>
+        <button class="btn btn-secondary btn-block" style="background-color: gray"> <a href="{% url 'destination-update' destination.id %}" style="color: white"> </small>Update</a></button>
     </a>
-    <a href="{% url 'destination-delete' destination.id %}">
-        <button>Delete</button>
+    <br>
+   
+        <button class="btn btn-secondary btn-block" style="background-color: gray">  <a href="{% url 'destination-delete' destination.id %}" style="color: white"> </small>Delete </a></button> 
     </a>
 {% endblock content %}
